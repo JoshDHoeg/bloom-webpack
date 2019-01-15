@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input.jsx";
+import style from "./app.scss";
 
 class FormContainer extends Component {
   constructor() {
     super();
 
     this.state = {
-      seo_title: ""
+      username: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -18,15 +19,16 @@ class FormContainer extends Component {
   }
 
   render() {
-    const { seo_title } = this.state;
+    const { username } = this.state;
     return (
       <form id="article-form">
+        <p className="app">Login to your account</p>
         <Input
-          text="SEO title"
-          label="seo_title"
+          text="username"
+          label="username"
           type="text"
-          id="seo_title"
-          value={seo_title}
+          id="username"
+          value={username}
           handleChange={this.handleChange}
         />
       </form>
