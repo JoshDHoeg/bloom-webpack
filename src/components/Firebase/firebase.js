@@ -2,23 +2,22 @@ import app from 'firebase/app';
 import 'firebase/auth';
 
 const config = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  databaseURL: process.env.REACT_APP_DATABASE_URL,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  apiKey: "AIzaSyB2yzJhaQ1zy8bkIOVP6gbhNxBvV7Bhd7M",
+  authDomain: "bloomdash-aca9f.firebaseapp.com",
+  databaseURL: "https://bloomdash-aca9f.firebaseio.com",
+  projectId: "bloomdash-aca9f",
+  storageBucket: "bloomdash-aca9f.appspot.com",
+  messagingSenderId: "327651474050",
 };
 
 export default class Firebase {
   constructor() {
-
-
+    app.initializeApp(config);
+    this.auth = app.auth();
   }
 
   componentDidMount(){
-    app.initializeApp(config);
-    this.auth = app.auth();
+
   }
   // *** Auth API ***
 
