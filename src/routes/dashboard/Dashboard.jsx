@@ -4,6 +4,8 @@ import style from "./dashboard.scss";
 import NavBar from "./../../components/navbar/Navbar.jsx";
 import Sidebar from "./../../components/sidebar/Sidebar.jsx";
 import { Grid, Row, Col } from 'react-bootstrap';
+import  { FirebaseContext } from './../../components/Firebase';
+
 
 export default class Dashboard extends Component {
   constructor() {
@@ -20,7 +22,11 @@ export default class Dashboard extends Component {
               <Sidebar />
             </Col>
             <Col xs={12} md={8}>
-              <h1>This is the dashboard</h1>
+              <FirebaseContext.Consumer>
+                {firebase => {
+                  return <div>I've access to Firebase and render something.</div>;
+                }}
+              </FirebaseContext.Consumer>
             </Col>
           </Row>
         </Grid>

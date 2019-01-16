@@ -2,5 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AuthRouter from './AuthRouter.jsx';
 
+import Firebase, { FirebaseContext } from './components/Firebase';
 
-ReactDOM.render(<AuthRouter />, document.getElementById('app-wrapper-component'));
+
+ReactDOM.render(
+  <FirebaseContext.Provider value={new Firebase()}>
+     <AuthRouter />
+  </FirebaseContext.Provider>,
+  document.getElementById('app-wrapper-component')
+);

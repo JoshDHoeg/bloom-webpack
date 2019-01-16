@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Redirect, withRouter } from 'react-rout
 import Dashboard from "./routes/dashboard/Dashboard.jsx";
 import Login from "./routes/users/login/Login.jsx";
 import Signup from "./routes/users/signup/Signup.jsx";
+import * as firebaseui from 'firebaseui'
 
 //import other
 // import Axios from 'axios';
@@ -20,6 +21,7 @@ export default class AuthRouter extends React.Component {
     };
 
   }
+
 
   render (){
     return(
