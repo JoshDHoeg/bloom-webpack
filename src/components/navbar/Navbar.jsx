@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import style from "./navbar.scss";
 import {Navbar, Nav, MenuItem, NavDropdown, NavItem} from 'react-bootstrap';
+import SignOutButton from './../../routes/users/signout/SignOut.jsx';
 
 export default class NavBar extends Component {
   constructor() {
@@ -22,6 +23,11 @@ export default class NavBar extends Component {
           </NavItem>
           <NavItem eventKey={2} href="/signup">
             Signup
+          </NavItem>
+          <NavItem>
+            <li>
+              <SignOutButton />
+            </li>
           </NavItem>
         </Nav>
       </Navbar>
