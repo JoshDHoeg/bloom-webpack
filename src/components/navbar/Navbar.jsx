@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import style from "./navbar.scss";
 import {Navbar, Nav, MenuItem, NavDropdown, NavItem} from 'react-bootstrap';
 
-export default class Navbar extends Component {
+export default class NavBar extends Component {
   constructor() {
     super();
   }
@@ -13,14 +13,14 @@ export default class Navbar extends Component {
       <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#home">Bloomtime Design</a>
+            <a href="/">Bloomtime Design</a>
           </Navbar.Brand>
         </Navbar.Header>
         <Nav>
-          <NavItem eventKey={1} href="#">
+          <NavItem eventKey={1} href="/login">
             Login
           </NavItem>
-          <NavItem eventKey={2} href="#">
+          <NavItem eventKey={2} href="/signup">
             Signup
           </NavItem>
         </Nav>
