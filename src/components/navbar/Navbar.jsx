@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import style from "./navbar.scss";
 import {Navbar, Nav, MenuItem, NavDropdown, NavItem} from 'react-bootstrap';
 
-export default class ClassName extends Component {
+export default class Navbar extends Component {
   constructor() {
     super();
   }
