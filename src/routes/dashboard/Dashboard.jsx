@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import style from "./dashboard.scss";
-import NavBar from "./../../components/navbar/Navbar.jsx";
+import NavBar from "./../../components/navigation/Navigation.jsx";
 import Sidebar from "./../../components/sidebar/Sidebar.jsx";
 import { Grid, Row, Col } from 'react-bootstrap';
 import  { FirebaseContext } from './../../components/Firebase';
@@ -15,7 +15,6 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div className="wrapper">
-        <NavBar />
         <Grid>
           <Row className="show-grid">
             <Col xs={12} md={4}>

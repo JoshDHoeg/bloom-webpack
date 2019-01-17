@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import style from "./signup.scss";
-import NavBar from "./../../../components/navbar/Navbar.jsx";
 import { Link, withRouter } from 'react-router-dom';
 import { withFirebase } from './../../../components/Firebase';
 import { compose } from 'recompose';
 
 const SignUpPage = () => (
   <div>
-    <NavBar />
     <h1>SignUp</h1>
     <SignUpForm />
   </div>

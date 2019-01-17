@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom";
 import style from "./login.scss";
-import NavBar from "./../../../components/navbar/Navbar.jsx";
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
@@ -10,7 +9,6 @@ import { withFirebase } from './../../../components/Firebase';
 
 const SignInPage = () => (
   <div>
-    <NavBar />
     <h1>SignIn</h1>
     <SignInForm />
     <SignUpLink />
