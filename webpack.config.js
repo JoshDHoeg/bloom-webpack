@@ -1,4 +1,5 @@
 var path = require('path');
+var port = process.env.PORT || 8080;
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
