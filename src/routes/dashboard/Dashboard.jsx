@@ -5,9 +5,10 @@ import NavBar from "./../../components/navigation/Navigation.jsx";
 import Sidebar from "./../../components/sidebar/Sidebar.jsx";
 import { Grid, Row, Col } from 'react-bootstrap';
 import  { FirebaseContext } from './../../components/Firebase';
+import { withAuthorization } from './../../components/Session';
 
 
-export default class Dashboard extends Component {
+class Dashboard extends Component {
   constructor() {
     super();
   }
@@ -32,4 +33,8 @@ export default class Dashboard extends Component {
       </div>
     );
   }
-}
+};
+
+const condition = authUser => !!authUser;
+
+export default withAuthorization(condition)(Dashboard);
