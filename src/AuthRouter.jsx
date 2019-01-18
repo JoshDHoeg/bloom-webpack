@@ -1,35 +1,42 @@
 // Bloomtime 2018
-import React from "react";
-
-//import components
+import React from 'react';
 import { BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom';
-import Dashboard from "./routes/dashboard/Dashboard.jsx";
-import Login from "./routes/users/login/Login.jsx";
-import Signup from "./routes/users/signup/Signup.jsx";
+import * as firebaseui from 'firebaseui';
 
-//import other
-// import Axios from 'axios';
-// import {Cookies} from 'react-cookie';
-// import Parse from 'url-parse';
+//IMPORT COMPONENTS
+import Navigation from "./components/Navigation/index.jsx";
 
-export default class AuthRouter extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
+//IMPORT ROUTES
+import Dashboard from "./routes/Dashboard/index.jsx";
+import Login from "./routes/users/Signin/index.jsx";
+import Signup from "./routes/users/Signup/index.jsx";
+import Account from "./routes/Account/index.jsx";
+import PasswordForgetPage from './routes/users/PasswordForget/index.jsx';
 
-    };
+//IMPORT UTILS
+import { withFirebase } from './utils/Firebase';
+import { withAuthentication } from './utils/Session';
+import * as ROUTES from './utils/constants/routes';
 
-  }
+/*
+This is the main app component, essentially all the code in the app comes here first.
 
-  render (){
-    return(
-      <Router>
-        <div>
-          <Route exact path='/' component={Dashboard}/>
-          <Route path='/login' component={Login}/>
-          <Route path='/signup' component={Signup}/>
-        </div>
-      </Router>
-    )
-  }
-}
+We are using react-router which essentially takes the URL and decides which components
+should be displayed based on the specific path. We are using a high level component above
+the AuthRouter that listens for the users authentication code and allows us to access the
+data at any point throughout the entire app.
+*/
+const AuthRouter = () => (
+    <Router>
+      <div>
+        <Navigation />
+        <Route exact path={ROUTES.HOME} component={Dashboard}/>
+        <Route path={ROUTES.SIGN_IN} component={Login}/>
+        <Route path={ROUTES.SIGN_UP} component={Signup}/>
+        <Route path={ROUTES.ACCOUNT} component={Account}/>
+        <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
+      </div>
+    </Router>
+);
+
+export default withAuthentication(AuthRouter);
