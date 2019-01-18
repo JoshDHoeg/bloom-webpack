@@ -31,6 +31,9 @@ const NavigationAuth = () => (
     </Navbar.Header>
     <Nav>
       <NavItem>
+        <Link to={ROUTES.ACCOUNT}>Account</Link>
+      </NavItem>
+      <NavItem>
           <SignOutButton />
       </NavItem>
     </Nav>

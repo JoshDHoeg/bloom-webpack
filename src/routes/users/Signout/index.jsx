@@ -1,5 +1,6 @@
 // Bloomtime 2018
 import React from 'react';
+import style from "./style.scss";
 
 //IMPORT UTILS
 import { withFirebase } from './../../../utils/Firebase';
