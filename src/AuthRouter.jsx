@@ -1,24 +1,31 @@
 // Bloomtime 2018
 import React from 'react';
+import { BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom';
+import * as firebaseui from 'firebaseui';
 
 //import components
-import { BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom';
+import Navigation from "./components/Navigation/index.jsx";
+
+//import routes
 import Dashboard from "./routes/Dashboard/index.jsx";
 import Login from "./routes/users/Signin/index.jsx";
 import Signup from "./routes/users/Signup/index.jsx";
 import Account from "./routes/Account/index.jsx";
 import PasswordForgetPage from './routes/users/PasswordForget/index.jsx';
-import Navigation from "./components/Navigation/index.jsx";
-import * as firebaseui from 'firebaseui';
+
+//import utils
 import { withFirebase } from './utils/Firebase';
-import * as ROUTES from './utils/constants/routes';
 import { withAuthentication } from './utils/Session';
+import * as ROUTES from './utils/constants/routes';
 
-//import other
-// import Axios from 'axios';
-// import {Cookies} from 'react-cookie';
-// import Parse from 'url-parse';
+/*
+This is the main app component, essentially all the code in the app comes here first.
 
+We are using react-router which essentially takes the URL and decides which components
+should be displayed based on the specific path. We are using a high level component above
+the AuthRouter that listens for the users authentication code and allows us to access the
+data at any point throughout the entire app.
+*/
 const AuthRouter = () => (
     <Router>
       <div>
