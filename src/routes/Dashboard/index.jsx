@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import style from "./dashboard.scss";
-import NavBar from "./../../components/navigation/Navigation.jsx";
-import Sidebar from "./../../components/sidebar/Sidebar.jsx";
+import style from "./style.scss";
+import NavBar from "./../../components/Navigation/index.jsx";
+import Sidebar from "./../../components/Sidebar/index.jsx";
 import { Grid, Row, Col } from 'react-bootstrap';
 import  { FirebaseContext } from './../../utils/Firebase';
 import { withAuthorization } from './../../utils/Session';

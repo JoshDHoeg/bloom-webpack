@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PasswordForgetForm } from './../users/PasswordForget/index.jsx';
-import PasswordChangeForm from './../users/PasswordChange';
+import PasswordChangeForm from './../users/PasswordChange/index.jsx';
 import { AuthUserContext, withAuthorization } from './../../utils/Session';
 
 const AccountPage = () => (

@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom";
-import style from "./login.scss";
+import style from "./style.scss";
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
-import { SignUpLink } from './../signup/Signup.jsx';
+import { SignUpLink } from './../Signup/index.jsx';
 import { PasswordForgetLink } from './../PasswordForget/index.jsx';
 import { withFirebase } from './../../../utils/Firebase';
 import * as ROUTES from './../../../utils/constants/routes.js';

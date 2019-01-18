@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import style from "./sidebar.scss";
+import style from "./style.scss";
 
 
 export default class Sidebar extends Component {

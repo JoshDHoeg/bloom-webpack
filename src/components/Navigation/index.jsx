@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactDOM from "react-dom";
-import style from "./navigation.scss";
+import style from "./style.scss";
 import {Navbar, Nav, MenuItem, NavDropdown, NavItem} from 'react-bootstrap';
-import SignOutButton from './../../routes/users/signout/SignOut.jsx';
+import SignOutButton from './../../routes/users/Signout/index.jsx';
 
 import * as ROUTES from './../../utils/constants/routes.js';
 import { AuthUserContext } from './../../utils/Session/index.js';
@@ -42,7 +42,7 @@ const NavigationNonAuth = () => (
       </Navbar.Header>
       <Nav>
         <NavItem>
-          <Link to={ROUTES.LOG_IN}>Login</Link>
+          <Link to={ROUTES.SIGN_IN}>Login</Link>
         </NavItem>
         <NavItem>
           <Link to={ROUTES.SIGN_UP}>Signup</Link>
