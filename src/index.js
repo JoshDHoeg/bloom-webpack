@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AuthRouter from './AuthRouter.jsx';
 
-import Firebase, { FirebaseContext } from './components/Firebase';
+import Firebase, { FirebaseContext } from './utils/Firebase';
 
 
 ReactDOM.render(

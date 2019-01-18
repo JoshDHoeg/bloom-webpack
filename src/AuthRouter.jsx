@@ -10,9 +10,9 @@ import Account from "./routes/Account/index.jsx";
 import PasswordForgetPage from './routes/users/PasswordForget/index.jsx';
 import Navigation from "./components/navigation/Navigation.jsx";
 import * as firebaseui from 'firebaseui';
-import { withFirebase } from './components/Firebase';
-import * as ROUTES from './constants/routes';
-import { withAuthentication } from './components/Session';
+import { withFirebase } from './utils/Firebase';
+import * as ROUTES from './utils/constants/routes';
+import { withAuthentication } from './utils/Session';
 
 //import other
 // import Axios from 'axios';

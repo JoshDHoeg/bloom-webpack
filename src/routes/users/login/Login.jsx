@@ -6,8 +6,8 @@ import { compose } from 'recompose';
 
 import { SignUpLink } from './../signup/Signup.jsx';
 import { PasswordForgetLink } from './../PasswordForget/index.jsx';
-import { withFirebase } from './../../../components/Firebase';
-import * as ROUTES from './../../../constants/routes';
+import { withFirebase } from './../../../utils/Firebase';
+import * as ROUTES from './../../../utils/constants/routes.js';
 
 const SignInPage = () => (
   <div>

@@ -5,8 +5,8 @@ import style from "./navigation.scss";
 import {Navbar, Nav, MenuItem, NavDropdown, NavItem} from 'react-bootstrap';
 import SignOutButton from './../../routes/users/signout/SignOut.jsx';
 
-import * as ROUTES from './../../constants/routes.js';
-import { AuthUserContext } from './../Session/index.js';
+import * as ROUTES from './../../utils/constants/routes.js';
+import { AuthUserContext } from './../../utils/Session/index.js';
 
 
 
