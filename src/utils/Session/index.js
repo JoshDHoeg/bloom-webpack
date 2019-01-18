@@ -1,3 +1,4 @@
+// Bloomtime 2018
 import AuthUserContext from './context';
 import withAuthentication from './withAuthentication';
 import withAuthorization from './withAuthorization';

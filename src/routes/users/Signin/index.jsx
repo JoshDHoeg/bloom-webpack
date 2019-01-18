@@ -1,11 +1,15 @@
+// Bloomtime 2018
 import ReactDOM from "react-dom";
 import style from "./style.scss";
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
+//IMPORT ROUTES
 import { SignUpLink } from './../Signup/index.jsx';
 import { PasswordForgetLink } from './../PasswordForget/index.jsx';
+
+//IMPORT UTILS
 import { withFirebase } from './../../../utils/Firebase';
 import * as ROUTES from './../../../utils/constants/routes.js';
 

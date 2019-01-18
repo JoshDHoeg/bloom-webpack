@@ -1,5 +1,7 @@
+// Bloomtime 2018
 import React from 'react';
 
+//IMPORT UTILS
 import { withFirebase } from './../../../utils/Firebase';
 
 const SignOutButton = ({ firebase }) => (

@@ -1,6 +1,8 @@
+// Bloomtime 2018
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+//IMPORT UTILS
 import { withFirebase } from './../../../utils/Firebase';
 import * as ROUTES from './../../../utils/constants/routes.js';
 

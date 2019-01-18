@@ -3,17 +3,17 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom';
 import * as firebaseui from 'firebaseui';
 
-//import components
+//IMPORT COMPONENTS
 import Navigation from "./components/Navigation/index.jsx";
 
-//import routes
+//IMPORT ROUTES
 import Dashboard from "./routes/Dashboard/index.jsx";
 import Login from "./routes/users/Signin/index.jsx";
 import Signup from "./routes/users/Signup/index.jsx";
 import Account from "./routes/Account/index.jsx";
 import PasswordForgetPage from './routes/users/PasswordForget/index.jsx';
 
-//import utils
+//IMPORT UTILS
 import { withFirebase } from './utils/Firebase';
 import { withAuthentication } from './utils/Session';
 import * as ROUTES from './utils/constants/routes';

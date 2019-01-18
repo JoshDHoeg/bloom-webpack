@@ -1,10 +1,14 @@
+// Bloomtime 2018
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactDOM from "react-dom";
 import style from "./style.scss";
 import {Navbar, Nav, MenuItem, NavDropdown, NavItem} from 'react-bootstrap';
+
+//IMPORT ROUTES
 import SignOutButton from './../../routes/users/Signout/index.jsx';
 
+//IMPORT UTILS
 import * as ROUTES from './../../utils/constants/routes.js';
 import { AuthUserContext } from './../../utils/Session/index.js';
 

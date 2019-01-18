@@ -1,5 +1,7 @@
+// Bloomtime 2018
 import React from 'react';
 
+//IMPORT UTILS
 import AuthUserContext from './context.js';
 import { withFirebase } from './../Firebase';
 

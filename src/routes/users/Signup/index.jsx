@@ -1,9 +1,12 @@
+// Bloomtime 2018
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import style from "./style.scss";
 import { Link, withRouter } from 'react-router-dom';
-import { withFirebase } from './../../../utils/Firebase';
 import { compose } from 'recompose';
+
+//IMPORT UTILS
+import { withFirebase } from './../../../utils/Firebase';
 import * as ROUTES from './../../../utils/constants/routes.js';
 
 const SignUpPage = () => (

@@ -1,9 +1,14 @@
+// Bloomtime 2018
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import style from "./style.scss";
+import { Grid, Row, Col } from 'react-bootstrap';
+
+//IMPORT COMPONENTS
 import NavBar from "./../../components/Navigation/index.jsx";
 import Sidebar from "./../../components/Sidebar/index.jsx";
-import { Grid, Row, Col } from 'react-bootstrap';
+
+//IMPORT UTILS
 import  { FirebaseContext } from './../../utils/Firebase';
 import { withAuthorization } from './../../utils/Session';
 

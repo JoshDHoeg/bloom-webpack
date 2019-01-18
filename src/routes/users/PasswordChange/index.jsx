@@ -1,5 +1,7 @@
+// Bloomtime 2018
 import React, { Component } from 'react';
 
+//IMPORT UTILS
 import { withFirebase } from './../../../utils/Firebase';
 
 const INITIAL_STATE = {
