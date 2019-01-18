@@ -6,28 +6,50 @@ import {Navbar, Nav, MenuItem, NavDropdown, NavItem} from 'react-bootstrap';
 import SignOutButton from './../../routes/users/signout/SignOut.jsx';
 
 import * as ROUTES from './../../constants/routes.js';
+import { AuthUserContext } from './../Session/index.js';
+
+
 
 const Navigation = () => (
+  <AuthUserContext.Consumer>
+      {authUser =>
+        authUser ? <NavigationAuth /> : <NavigationNonAuth />
+      }
+    </AuthUserContext.Consumer>
+);
+
+const NavigationAuth = () => (
   <Navbar>
     <Navbar.Header>
       <Navbar.Brand>
-        <Link to={ROUTES.LANDING}>Landing</Link>
+        <Link to={ROUTES.HOME}>Landing</Link>
       </Navbar.Brand>
     </Navbar.Header>
     <Nav>
       <NavItem>
-        <Link to={ROUTES.LOG_IN}>Login</Link>
-      </NavItem>
-      <NavItem>
-        <Link to={ROUTES.SIGN_UP}>Signup</Link>
-      </NavItem>
-      <NavItem>
-        <li>
           <SignOutButton />
-        </li>
       </NavItem>
     </Nav>
   </Navbar>
 );
+
+const NavigationNonAuth = () => (
+    <Navbar>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <Link to={ROUTES.HOME}>Landing</Link>
+        </Navbar.Brand>
+      </Navbar.Header>
+      <Nav>
+        <NavItem>
+          <Link to={ROUTES.LOG_IN}>Login</Link>
+        </NavItem>
+        <NavItem>
+          <Link to={ROUTES.SIGN_UP}>Signup</Link>
+        </NavItem>
+      </Nav>
+    </Navbar>
+);
+
 
 export default Navigation;

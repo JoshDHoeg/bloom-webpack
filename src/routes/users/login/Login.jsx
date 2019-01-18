@@ -6,6 +6,7 @@ import { compose } from 'recompose';
 
 import { SignUpLink } from './../signup/Signup.jsx';
 import { withFirebase } from './../../../components/Firebase';
+import * as ROUTES from './../../../constants/routes';
 
 const SignInPage = () => (
   <div>
@@ -35,7 +36,7 @@ class SignInFormBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push("/");
+        this.props.history.push(ROUTES.HOME);
       })
       .catch(error => {
         this.setState({ error });
