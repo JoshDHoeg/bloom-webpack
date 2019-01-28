@@ -1,5 +1,5 @@
 /*
-This file as the constant route values for the whole project so we dont have to 
+This file as the constant route values for the whole project so we dont have to
 change them multiple places we keep them here and use the ROUTES object instead
 */
 export const HOME = '/';
